@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Irish Doodles</title>
+</head>
+<style>
+    img{ width: 200px;}
+    .add{
+        display: inline-block;
+        margin-left:30px;
+        border-radius: 15px;
+        color: white;
+        background-color: rgb(9, 255, 0);
+        height:50px;
+    }
+    .container{
+        width: 250px;
+        Height: 300px;
+        border: 1px solid black;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+    }
+    a{
+        display: inline-block;
+
+    }
+</style>
+
+<body>
+
+            <p><button class = "add"><a href="/add">Add new Dog</a></button> </p>
+            <img src="is.jpeg">
+            <img src="po.jpeg">
+            <h1 class="display-4">Pack:</h1>
+            <% for (var doodle of doodles) { %>
+                <div class="container">
+            <p>Name: <%= doodle.name%></p>
+            <p>Breed: <%= doodle.breed%> </p>
+            <p>Sex: <%= doodle.sex%></p>
+            <p>Rank: <%= doodle.rank%> </p>
+            <p><button><a href="/edit/<%=doodle.id%>">Edit</a></button> </p>
+            <p><button><a href="/about/<%=doodle.id%>">About</a></button> </p>
+            <p><button><a href="/delete/<%=doodle.id%>">delete</a></button> </p>
+            <% } %>
+        </div>
+    </div>
+    <% if(messages.registration) { %>
+    <% for (var x of messages.registration) { %>
+    <h3><%= x %></h3>
+    <% } %>
+    <% } %>
+</body>
+
+</html>
