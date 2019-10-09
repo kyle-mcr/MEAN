@@ -23,6 +23,17 @@ app.get('/new/:name/', (req, res) => {
         .then(userdata => res.json(userdata))
         .catch(err => res.json(err));
 })
-
+app.get('/remove/:name/', (req, res) => {
+    const { name } = req.params;
+    User.remove({name: name})
+        .then(userdata => res.json(userdata))
+        .catch(err => res.json(err));
+})
+app.get('/:name/', (req, res) => {
+    const { name } = req.params;
+    User.find({name: name})
+        .then(userdata => res.json(userdata))
+        .catch(err => res.json(err));
+})
 app.listen(8000, () => console.log("listening on port 8000"));
 mongoose.connect('mongodb://localhost/1955', { useNewUrlParser: true });
