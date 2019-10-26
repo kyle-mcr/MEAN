@@ -1,0 +1,66 @@
+.button{
+    background-color: greenyellow;
+    padding:3px 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    margin-top:5px;
+   
+}
+
+.show_all {
+height: 400px;
+width: 680px;
+border: 1px solid #ccc;
+font: 16px/26px Georgia, Garamond, Serif;
+overflow: auto;
+display: inline-block;
+margin-left: 10px;
+
+}
+.container{
+    border: 1px solid black;
+    width:20%;
+    margin-left:5%;
+    display: inline-block;
+}
+.button1{
+    background-color: rgb(255, 0, 0);
+    padding:3px 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-left: 5%;
+    box-shadow: 0 8px 6px -6px black;
+}
+img{
+    width:150px;
+    height: 150px;
+    display: inline-block;
+}
+select, .form-group{
+    display: inline-block;
+}
+.root{
+display: inline-block;
+vertical-align: top;
+margin-left: 5px;
+border: 1px solid black;
+width:350px;
+
+}
+.form-group1{
+padding:15px;
+}
+.showcake{
+width:250px;
+height:250px;
+display: inline-block;
+}
+.show{
+width:700px;
+margin-top: 20px;
+border: 1px solid black;
+overflow: auto;
+
+
+}
